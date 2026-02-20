@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-Dom part 2</title>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <Script>
+        //Append Child
+        let title = document.createElement("h1");
+        title.className = "NBNSTIC";
+        title.style.fontSize = "25px";
+        title.textContent = "NBNSTIC, Hello";
+        console.log(title);
+        document.body.appendChild(title);
+
+        //Remove child
+        let ul = document.querySelector("ul");
+        console.log(ul);
+        let lists = document.querySelectorAll("li");
+        console.log(lists);
+        for(list of lists){       // for of loop is good to use because we dont need to count Element it itterate on all element 
+           ul.removeChild(list);
+        }
+    </Script>
+</body>
+</html>
